@@ -20,11 +20,10 @@ a:hover{
 
 .hero{
   position: relative;
-  height: 800px;
+  background-color: #000;
 }
 
 .hero-bg{
-  background-image: url(../images/cover_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(40%);
@@ -35,7 +34,23 @@ a:hover{
   height: 100%;
 }
 
-header{
+.index-hero {
+  height: 800px;
+}
+
+.blog-hero{
+  height: 400px;
+}
+
+.index-hero .hero-bg{
+  background-image: url(../images/cover_bg.jpg);
+}
+
+.blog-hero .hero-bg{
+  background-image: url(../images/blog_cover_bg.jpg);
+}
+
+.index-header{
   z-index: 2;
   position: absolute;
   left: 0;
@@ -56,7 +71,7 @@ header{
   position: absolute;
   left: 0;
   top: 0px;
-  padding: 100px 30px 0 30px;
+  padding: 100px 30px 100px 30px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -170,6 +185,79 @@ footer{
   padding: 0 30px;
 }
 
+.blog-main{
+  padding: 30px;
+}
+
+.light-bg{
+  color: #333;
+}
+
+.blog{
+  margin: 30px 20px 40px 20px;
+  padding: 30px !important; 
+  border: 1px solid #000;
+}
+
+.blog-content.active{
+  height: auto !important;
+  opacity: 1 !important;
+}
+
+.blog-content{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.blog-content h2{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.blog-content h3{
+  width: 100%;
+}
+
+.blog-title{
+  width: 100%;
+}
+.blog-info{
+  color: #999;
+  font-size: 0.8em;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.container-nopadding{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-content h3{
+  margin-top: 40px;
+}
+
+.blog-content p{
+  margin: 0;
+  padding: 0 20px;
+  width: 60%;
+}
+
+.blog-content img{
+  padding: 20px;
+  display: block;
+  width: 40%;
+}
+
+.close-blog{
+  padding-top: 30px;
+}
+
 @media screen and (max-width: 768px) {
   header, nav, nav ul, nav ul li{
     padding: 0;
@@ -186,7 +274,7 @@ footer{
   }
 
   .hero-fg{
-    padding: 200px 30px 0 30px;
+    padding: 220px 30px 0 30px;
   }
 
   .hero-fg h1{
@@ -222,5 +310,19 @@ footer{
     font-size: 0.8em;
     width: 100%;
     text-align: center;
+  }
+
+  h3{
+    margin-top: 60px;
+  }
+  .blog-content p{
+    margin-top: 0;
+    padding: 0px;
+    width: 100%;
+  }
+  
+  .blog-content img{
+    padding: 20px 0 20px 0;
+    width: 100%;
   }
 }
